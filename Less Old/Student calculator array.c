@@ -4,7 +4,7 @@ int input(int roll[], int mark1[], int mark2[])
 {
     int num= 0, grader =0, avg = 0, total;
     char grade;
-    printf("Roll No. | Total | Avg | Grade \n");
+    printf("\nRoll No. | Total | Avg | Grade \n");
     while (num<5)
     {
         grader = ((mark1[num]+mark2[num])/2);
@@ -29,7 +29,7 @@ int input(int roll[], int mark1[], int mark2[])
         {     
             grade = 'F';  
         }
-        printf("%d        | %d   | %d    | %s \n", roll[num], total, grader, grade);
+        printf("%8.0d | %5.0d | %3.0d | %5.0c\n", roll[num], total, grader, grade);
         num++;
     }
 }
@@ -40,8 +40,6 @@ int main()
     int n = 1, i;
     for(i=0; i<5; i++)
     {
-        printf("Please enter the first name of student %d: ", n);
-          scanf("%s");
         printf("\n Enter the roll number of student %d: ", n);
           scanf("%d", &roll[i]);
         printf("\n Enter the marks of subject 1 of student %d: ", n);
@@ -52,3 +50,5 @@ int main()
     }
     input(roll, mark1, mark2);
 }
+
+// TEST INPUT: 1 90 80  2 75 65  3 80 60  4 40 30  5 95 45
